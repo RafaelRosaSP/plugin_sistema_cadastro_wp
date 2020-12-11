@@ -28,7 +28,7 @@ function carregar_js_css(){
 
 }
 
-add_action('wp_enqueue_script', 'carregar_js_css');
+add_action('wp_enqueue_scripts', 'carregar_js_css');
 
 // criação shortcode de login
 function dl_auth_form_shortcode(){

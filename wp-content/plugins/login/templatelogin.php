@@ -2,7 +2,7 @@
 <div class="dl_loginarea">
     <div class="dl_loginarea_item">
         <h4>Login</h4>
-        <form method="post">
+        <form method="post" id="login">
             E-mail<br><br>
             <input type="email" name="email" id="login_email"><br><br>
             Senha<br><br>
@@ -12,7 +12,7 @@
     </div>
     <div class="dl_loginarea_item">
         <h4>Cadastro</h4>
-        <form method="post">
+        <form method="post" id="cadastro">
             Nome<br><br>
             <input type="text" name="name" id="cadastro_name"><br><br>
             E-mail<br><br>
