@@ -26,6 +26,10 @@ function carregar_js_css(){
    wp_enqueue_style('css', plugins_url('/style.css', __FILE__));
    wp_enqueue_script('js', plugins_url('/script.js', __FILE__), array('jquery'), '1.0', true);
 
+// transferir dados do php para o javascript
+    wp_localize_script('js', 'login_obj', array(
+        'ajax_url' => admin_url("admin-ajax.php"),
+    ));
 }
 
 add_action('wp_enqueue_scripts', 'carregar_js_css');
