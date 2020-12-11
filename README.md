@@ -1,0 +1,1 @@
+# plugin_sistema_cadastro_wp
