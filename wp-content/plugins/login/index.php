@@ -8,13 +8,13 @@ Description: Um Plugin de Cadsatro de Usuarios e Login
 */
 
 if(!function_exists('add_action')){
-    echo "O plugin não pode ser acessado diretamente;
+    echo "O plugin não pode ser acessado diretamente";
     exit;
 }
 
 // Ativação de plugin
 function dl_ativacao_plugin(){
-    if(version_compare(get_bloginfo('version, '4.8', '<')){
+    if(version_compare(get_bloginfo('version'), '4.8', '<')){
         wp_die("Você precisa atualizar o wordpress para atualizar o plugin");
     }
 }
@@ -28,7 +28,16 @@ function carregar_js_css(){
 
 }
 
-add_action('wp_enqueue_script', 'carrregar_js_css');
+add_action('wp_enqueue_script', 'carregar_js_css');
+
+// criação shortcode de login
+function dl_auth_form_shortcode(){
+    $formHTL = file_get_contents(plugins_url('login/templatelogin.php'));
+    
+        echo   $formHTL;
+}
+
+add_shortcode('login_auth_form', 'dl_auth_form_shortcode');
 
 
 
